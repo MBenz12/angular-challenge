@@ -1,0 +1,6 @@
+.tool-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: 0 0 10px 0px #000;
+}
