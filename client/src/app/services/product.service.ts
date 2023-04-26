@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environments';
 
 export interface Product {
   _id: string;
@@ -13,7 +14,7 @@ export enum PRODUCT_ACTION {
   DELETE = 'delete',
 }
 
-const apiUrl = `${process.env['SERVER_URL']}/api/products`;
+const apiUrl = `${environment.serverUrl}/api/products`;
 
 const getProducts = (http: HttpClient) => (): Observable<Product[]> => {
   return http.get<Product[]>(apiUrl);

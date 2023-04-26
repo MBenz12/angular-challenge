@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
+import { environment } from 'src/environments/environments';
 
-const apiURL = `${process.env['SERVER_URL']}/api/auth`;
+const apiURL = `${environment.serverUrl}/api/auth`;
 
 const register =
   (http: HttpClient) =>
